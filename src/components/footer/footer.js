@@ -7,8 +7,9 @@ import styled from "styled-components"
     const [weather, setWeather] = useState('')
 
     useEffect(() => {
-        fetch('https://api.openweathermap.org/data/3.0/onecall?q=Moscow&units=metric&;ang=ru&appid=77bb0020df4d43333ee8f2fbf6f05498')
-                .then((res)=>console.log(res.json()))
+        //fetch('https://api.openweathermap.org/data/3.0/onecall?q=Moscow&units=metric&;ang=ru&appid=77bb0020df4d43333ee8f2fbf6f05498')
+        //        .then((res)=>console.log(res.json()))
+
                 //.then(({name, temp, main})=>{
                 //    //setCity(name);
                 //    setTemperature(Math.round(temp));
@@ -40,4 +41,5 @@ export const Footer = styled(FooterContainer)`
     font-weight: bold;
     background-color: #fff;
     box-shadow: 0px 2px 17px #000;
+    align-self: last baseline
 `
