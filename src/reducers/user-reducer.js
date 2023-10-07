@@ -4,7 +4,7 @@ import {ROLE} from '../bff/constants'
 const inistialUserState = {
     id: null,
     login: null,
-    roleid: ROLE.GUEST,
+    roleId: ROLE.GUEST,
     session: null,
 };
 
