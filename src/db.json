@@ -3,15 +3,22 @@
     {
       "id": "01",
       "login": "anton",
-      "password": "qwerty123",
+      "password": "111111",
       "registered_at": "2050-09-22",
       "role_id": 0
     },
     {
-      "id": "C58WyuV",
-      "login": "asasas",
+      "id": "h_h4DOX",
+      "login": "atimtim",
+      "password": "atimtim",
+      "registered_at": "2040-01-07 11:43",
+      "role_id": 2
+    },
+    {
+      "id": "ji0UjR8",
+      "login": "ivan3",
       "password": "111111",
-      "registered_at": "2060-06-25 04:48",
+      "registered_at": "2041-06-08 17:33",
       "role_id": 2
     }
   ],

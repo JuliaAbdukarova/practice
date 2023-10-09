@@ -13,15 +13,7 @@ const RightAligned = styled.div`
     align-items:center;
 `
 
-
-
 const StyledBackIcon = styled.div`
-    &:hover {
-        cursor: pointer;
-    }
-`
-const StyledIcon = styled.div`
-
     &:hover {
         cursor: pointer;
     }
@@ -39,7 +31,7 @@ const ControlPanelContainer = ({className}) => {
     const login = useSelector(selectUserLogin);
     const session = useSelector(selectUserSession);
 
-    console.log(`role = ${roleId} `);
+    //console.log(`role = ${roleId} `);
 
     return (
         <div className={className}>
@@ -51,21 +43,20 @@ const ControlPanelContainer = ({className}) => {
                         (
                             <>
                                 <UserName> {login} </UserName>
-                                <StyledIcon>
+
                                     <Icon
                                         icon_id="fa-sign-out"
                                         margin="0 0 0 10px"
                                         onClick={() => dispatch(logout(session))}
                                     />
-                                </StyledIcon>
                             </>
                         ) }
 
             </RightAligned>
             <RightAligned>
-                <StyledBackIcon  onClick={()=>navigate(-1)}>
-                    <Icon icon_id="fa-backward" margin="10px 0 0 0" />
-                </StyledBackIcon>
+
+                    <Icon icon_id="fa-backward" margin="10px 0 0 0"  onClick={()=>navigate(-1)} />
+
                 <Link to="/post"><Icon icon_id="fa-file-text-o" margin="10px 0 0 16px" /></Link>
                 <Link to="/users"><Icon icon_id="fa-users" margin="10px 0 0 16px"/></Link>
             </RightAligned>
