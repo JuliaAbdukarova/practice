@@ -37,29 +37,28 @@ const UsersContainer = ({className}) => {
 
     return (
         <div className = {className}>
-            errorMessage
-                <Content error = {errorMessage}>
-                    <H2>Пользователи</H2>
-                    <div>
-                        <TableRow>
-                            <div className = "login-column" >Логин</div>
-                            <div className = "registered-at-column" >Дата регистрации</div>
-                            <div className = "role-column">Роль</div>
-                        </TableRow>
-                            {users.map(({id, login, registeredAt, roleId})=>(
-                                <UserRow
-                                    key={id}
-                                    id={id}
-                                    login={login}
-                                    registeredAt={registeredAt}
-                                    roleId={roleId}
-                                    roles={roles.filter(({id: roleId})=> roleId !== ROLE.GUEST)}
-                                    onUserRemove={()=>onUserRemove(id)}
-                                />
-                            ))}
+            <Content error = {errorMessage}>
+                <H2>Пользователи</H2>
+                <div>
+                    <TableRow>
+                        <div className = "login-column" >Логин</div>
+                        <div className = "registered-at-column" >Дата регистрации</div>
+                        <div className = "role-column">Роль</div>
+                    </TableRow>
+                        {users.map(({id, login, registeredAt, roleId})=>(
+                            <UserRow
+                                key={id}
+                                id={id}
+                                login={login}
+                                registeredAt={registeredAt}
+                                roleId={roleId}
+                                roles={roles.filter(({id: roleId})=> roleId !== ROLE.GUEST)}
+                                onUserRemove={()=>onUserRemove(id)}
+                            />
+                        ))}
 
-                    </div>
-                </Content>
+                </div>
+            </Content>
         </div>
     );
 

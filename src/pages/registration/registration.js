@@ -34,8 +34,6 @@ const regFormSchema = yup.object().shape({
 
 })
 
-
-
 const RegistrationContainer = ({className}) => {
 
     const {
@@ -68,6 +66,7 @@ const RegistrationContainer = ({className}) => {
             }
 
             dispatch(setUser(res));
+            sessionStorage.setItem('userData', JSON.stringify(res))
         })
     }
 
