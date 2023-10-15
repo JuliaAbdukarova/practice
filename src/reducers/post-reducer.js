@@ -1,6 +1,6 @@
 import { ACTION_TYPE } from "../actions";
 
-const inistialPostState = {
+export const initialPostState = {
     id: '',
     title: '',
     imageUrl: '',
@@ -9,13 +9,15 @@ const inistialPostState = {
     comments: [],
 };
 
-export const postReducer = (state=inistialPostState, action ) => {
+export const postReducer = (state=initialPostState, action ) => {
     switch (action.type) {
         case ACTION_TYPE.SET_POST_DATA:
             return {
                 ...state,
                 ...action.payload,
-            }
+            };
+        case ACTION_TYPE.RESET_POST_DATA:
+            return initialPostState;
         default:
             return state;
     }

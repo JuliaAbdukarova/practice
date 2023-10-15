@@ -39,7 +39,6 @@ const ControlPanelContainer = ({className}) => {
     return (
         <div className={className}>
             <RightAligned>
-
                     { (roleId === undefined || roleId === ROLE.GUEST)  ?
                         ( <Button> <Link to="/login">Войти</Link> </Button>) :
 
@@ -54,12 +53,9 @@ const ControlPanelContainer = ({className}) => {
                                     />
                             </>
                         ) }
-
             </RightAligned>
             <RightAligned>
-
-                    <Icon icon_id="fa-backward" margin="10px 0 0 0"  onClick={()=>navigate(-1)} />
-
+                <Icon icon_id="fa-backward" margin="10px 0 0 0"  onClick={()=>navigate(-1)} />
                 <Link to="/post"><Icon icon_id="fa-file-text-o" margin="10px 0 0 16px" /></Link>
                 <Link to="/users"><Icon icon_id="fa-users" margin="10px 0 0 16px"/></Link>
             </RightAligned>
