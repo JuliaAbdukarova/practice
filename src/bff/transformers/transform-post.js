@@ -1,7 +1,5 @@
 export const transformPost = (dbPost) => {
 
-    //console.log('transformPost:db', dbPost);
-
     const client = {
         id: dbPost.id,
         title: dbPost.title,
@@ -9,7 +7,6 @@ export const transformPost = (dbPost) => {
         content: dbPost.content,
         publishedAt: dbPost.published_at,
     }
-    //console.log('transformPost:client', client);
 
     return client;
 }
