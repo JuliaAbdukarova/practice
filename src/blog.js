@@ -14,10 +14,12 @@ const AppColumn = styled.div`
    margin: 0 auto;
    min-height: 100%;
    background-color: #fff;
+   position: relative;
 `
 
 const Page = styled.div`
     padding: 120px 0 20px;
+
 `
 
 function Blog() {

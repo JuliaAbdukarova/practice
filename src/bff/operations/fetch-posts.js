@@ -2,12 +2,9 @@ import { getComments, getPosts } from "../api";
 
 import { getCommentsCount } from "../utils";
 
-export const fetchPosts = async (page, limit) => {
-
+export const fetchPosts = async (searchPhrase, page, limit) => {
     const comments = await getComments();
-    const {posts, links} = await getPosts(page, limit);
-
-    console.log("LINKS", links);
+    const {posts, links} = await getPosts(searchPhrase, page, limit);
 
     return {
         error: null,
