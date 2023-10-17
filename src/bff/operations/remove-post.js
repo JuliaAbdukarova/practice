@@ -14,7 +14,7 @@ export const removePost = async (hash, id) => {
             res: null,
         }
     }
-    console.log('removePost id = ',id)
+    //console.log('removePost id = ',id)
 
     await deletePost(id);
 

@@ -66,7 +66,6 @@ export const Main = styled (MainContainer)`
     flex-direction: column;
     justify-content: space-between;
 
-
     & .post-list {
         display: flex;
         flex-wrap: wrap;
