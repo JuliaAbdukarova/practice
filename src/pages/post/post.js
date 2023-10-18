@@ -41,6 +41,8 @@ const PostContainer = ({className}) => {
         return null;
     }
 
+
+
     const specificPostPage = isCreating || isEditing?
                 (   <PrivateContent access={[ROLE.ADMIN]} serverError={error}>
                         <div className = {className}>
